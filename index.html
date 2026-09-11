@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Mateus Parente | Advogado Trabalhista e Cível em Curitiba - PR</title>
-  <meta name="description" content="Advogado Trabalhista, Cível e Empresarial em Curitiba/PR. Escritório Parente & Mariano. Defesa estratégica dos seus direitos trabalhistas, rescisões, horas extras e assessoria jurídica." />
+  <title>Dr. Mateus Parente | Advocacia Estratégica</title>
+  <meta name="description" content="Advogado Trabalhista e Cível em Curitiba/PR. Defesa intransigente com atendimento pessoal e transparente." />
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter as the Super Sans alternative -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,27 +18,24 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              navy: '#0E1726',
-              navyDark: '#0A111D',
-              navyLight: '#1A2942',
-              gold: '#C5A880',
-              goldLight: '#D4B892',
-              crimson: '#8B1E2B',
-              crimsonHover: '#751924',
-              grayMain: '#1A1A1A',
-              grayMuted: '#555555',
-              grayLight: '#F8F9FA',
-              grayBorder: '#E5E7EB'
+            sh: {
+              wine: '#421d24',
+              violet: '#714cb6',
+              lilac: '#d4c7ff',
+              lagoon: '#0c4243',
+              parchment: '#f2f0eb',
+              mist: '#e3e3e2',
+              charcoal: '#292827',
+              stone: '#666666',
+              paper: '#ffffff'
             }
           },
           fontFamily: {
             sans: ['"Inter"', 'sans-serif'],
-            serif: ['"Cormorant Garamond"', 'serif']
           },
-          boxShadow: {
-            'elegant': '0 10px 30px rgba(0, 0, 0, 0.05)',
-            'elegant-hover': '0 15px 35px rgba(0, 0, 0, 0.08)'
+          letterSpacing: {
+            'tight-sh': '-0.027em',
+            'tighter-sh': '-0.028em',
           }
         }
       }
@@ -50,383 +47,390 @@
 
   <style>
     body {
-      color: #1A1A1A;
-      background-color: #FFFFFF;
+      background-color: #f2f0eb;
+      color: #292827;
+      font-weight: 400;
     }
     ::selection {
-      background-color: #C5A880;
-      color: #FFFFFF;
+      background-color: #d4c7ff;
+      color: #292827;
     }
-    .shadow-hover-up {
-      transition: all 0.3s ease;
+    
+    /* Editorial headings mimicking weight 460 */
+    .heading-display {
+      font-weight: 500;
+      letter-spacing: -0.028em;
+      line-height: 1.05;
     }
-    .shadow-hover-up:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    .heading-section {
+      font-weight: 500;
+      letter-spacing: -0.027em;
+      line-height: 1.15;
     }
-    .eyebrow {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #C5A880;
-      font-weight: 600;
+
+    /* Floating UI glass effect */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    /* Custom Violet Link Hover */
+    .link-violet {
+      color: #714cb6;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .link-violet:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /* Hide scrollbar on header when scrolling */
+    header {
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+    header.scrolled {
+      background: rgba(242, 240, 235, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom-color: #e3e3e2;
     }
   </style>
 </head>
-<body class="font-sans antialiased text-brand-grayMain bg-white">
+<body class="font-sans antialiased">
 
-  <!-- TOP BAR -->
-  <div class="bg-brand-navyDark text-slate-300 py-2 text-sm border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+  <!-- PILL ANNOUNCEMENT BANNER -->
+  <div class="max-w-[1200px] mx-auto px-4 pt-4 sm:px-6 lg:px-8">
+    <div class="bg-sh-wine text-sh-paper rounded-full py-2.5 px-5 flex flex-col sm:flex-row justify-between items-center text-sm">
       <div class="flex items-center gap-2">
-        <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i>
-        <span>Rua Riachuelo, 102 - Centro, Curitiba - PR</span>
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-medium">Plantão Jurídico em Curitiba e Região</span>
       </div>
-      <div class="flex items-center gap-5">
-        <a href="tel:+554132333784" class="hover:text-white transition flex items-center gap-2">
-          <i data-lucide="phone" class="w-4 h-4 text-brand-gold"></i>
-          <span>(41) 3233-3784</span>
-        </a>
-        <a href="https://wa.me/5541995552002" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2 text-brand-gold font-semibold">
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
-          <span>(41) 99555-2002</span>
+      <div class="flex items-center gap-4 mt-2 sm:mt-0">
+        <a href="tel:+554132333784" class="hover:text-sh-lilac transition opacity-90">(41) 3233-3784</a>
+        <a href="https://wa.me/5541995552002" target="_blank" class="font-semibold text-sh-lilac hover:text-white transition flex items-center gap-1.5 border border-sh-lilac/30 rounded-full px-3 py-1">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          Falar via WhatsApp
         </a>
       </div>
     </div>
   </div>
 
-  <!-- HEADER -->
-  <header class="bg-white sticky top-0 z-40 border-b border-brand-grayBorder shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+  <!-- NAVIGATION HEADER -->
+  <header id="main-nav" class="sticky top-0 z-40 border-b border-transparent">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- LOGO -->
-      <a href="#" class="flex items-center gap-4 group">
-        <div class="text-left">
-          <span class="block font-serif text-2xl font-bold tracking-wide text-brand-navy group-hover:text-brand-gold transition">DR. MATEUS PARENTE</span>
-          <span class="block text-xs uppercase tracking-widest text-brand-grayMuted font-medium mt-0.5">Parente & Mariano Advogados</span>
-        </div>
+      <a href="#" class="flex flex-col group">
+        <span class="font-semibold text-lg text-sh-charcoal tracking-tight group-hover:opacity-70 transition">Dr. Mateus Parente</span>
       </a>
 
       <!-- NAV DESKTOP -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-navy">
-        <a href="#inicio" class="hover:text-brand-gold transition">Início</a>
-        <a href="#areas" class="hover:text-brand-gold transition">Áreas de Atuação</a>
-        <a href="#sobre" class="hover:text-brand-gold transition">O Advogado</a>
-        <a href="#diferenciais" class="hover:text-brand-gold transition">Diferenciais</a>
+      <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium text-sh-charcoal">
+        <a href="#inicio" class="hover:opacity-60 transition">Início</a>
+        <a href="#areas" class="hover:opacity-60 transition">Especialidades</a>
+        <a href="#sobre" class="hover:opacity-60 transition">O Escritório</a>
       </nav>
 
-      <!-- CTA -->
-      <div class="hidden sm:flex">
-        <a href="https://wa.me/5541995552002" target="_blank" class="inline-flex items-center gap-2 bg-brand-crimson hover:bg-brand-crimsonHover text-white font-semibold px-6 py-3 rounded transition">
-          <span>Avaliação Gratuita</span>
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      <!-- AUTH / CTA -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/5541995552002" target="_blank" class="text-[15px] font-medium text-sh-charcoal hover:opacity-60 transition px-4 py-2">
+          Dúvidas?
+        </a>
+        <a href="https://wa.me/5541995552002" target="_blank" class="bg-sh-lilac text-sh-charcoal border border-sh-charcoal font-medium text-[15px] px-4 py-1.5 rounded-lg hover:bg-sh-lilac/80 transition">
+          Avaliar Caso
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="inicio" class="bg-brand-grayLight py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        
-        <!-- Left: Text content -->
-        <div class="space-y-6 text-center lg:text-left">
-          <span class="eyebrow flex items-center justify-center lg:justify-start gap-2">
-            <span class="w-6 h-px bg-brand-gold"></span>
-            Advocacia Especializada em Curitiba
-          </span>
-          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-navy leading-tight">
-            A Justiça que Seus Direitos Merecem.
-          </h1>
-          <p class="text-brand-grayMuted text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
-            Defesa sólida e combativa em causas trabalhistas e cíveis. Não deixe seus direitos para trás. Agende uma análise confidencial e transparente com o Dr. Mateus Parente.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
-            <a href="https://wa.me/5541995552002" target="_blank" class="bg-brand-crimson hover:bg-brand-crimsonHover text-white font-semibold px-8 py-4 rounded text-center transition flex items-center justify-center gap-2 shadow-md">
-              <i data-lucide="message-circle" class="w-5 h-5"></i>
-              Falar no WhatsApp
-            </a>
-            <a href="#areas" class="bg-white border border-brand-grayBorder hover:border-brand-gold text-brand-navy font-semibold px-8 py-4 rounded text-center transition">
-              Nossas Especialidades
-            </a>
-          </div>
-          <div class="flex items-center justify-center lg:justify-start gap-4 pt-6 text-sm text-brand-grayMuted font-medium">
-            <div class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> Sigilo Absoluto</div>
-            <div class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> Atendimento Direto</div>
-          </div>
-        </div>
-
-        <!-- Right: Image -->
-        <div class="relative">
-          <img src="assets/mateus_parente_portrait.jpg" alt="Dr. Mateus Parente" class="w-full h-[550px] object-cover rounded shadow-elegant" />
-          <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded shadow-elegant flex flex-col gap-1 hidden md:flex border-l-4 border-brand-gold">
-            <span class="font-serif text-2xl font-bold text-brand-navy">OAB/PR</span>
-            <span class="text-sm font-medium text-brand-grayMuted">Advocacia Ética e Combate</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROOF BAR -->
-  <section class="bg-brand-navy py-12 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/10 text-center">
-        <div class="px-4">
-          <div class="text-4xl font-serif font-bold text-brand-gold mb-2">+1.500</div>
-          <div class="text-sm font-medium text-slate-300">Casos Atendidos</div>
-        </div>
-        <div class="px-4">
-          <div class="text-4xl font-serif font-bold text-brand-gold mb-2">Sede</div>
-          <div class="text-sm font-medium text-slate-300">Centro de Curitiba</div>
-        </div>
-        <div class="px-4">
-          <div class="text-4xl font-serif font-bold text-brand-gold mb-2">100%</div>
-          <div class="text-sm font-medium text-slate-300">Atendimento Humanizado</div>
-        </div>
-        <div class="px-4">
-          <div class="text-4xl font-serif font-bold text-brand-gold mb-2">OAB/PR</div>
-          <div class="text-sm font-medium text-slate-300">Atuação Regulamentada</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ÁREAS DE ATUAÇÃO -->
-  <section id="areas" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- HERO SECTION (Cinematic Photography & Floating UI) -->
+  <section id="inicio" class="relative max-w-[1200px] mx-auto sm:mt-4 mb-24 lg:mb-32">
+    <!-- Cinematic Full Bleed Image (Simulated by container) -->
+    <div class="relative w-full h-[600px] sm:h-[700px] lg:h-[800px] rounded-none sm:rounded-3xl overflow-hidden bg-sh-wine">
+      <img src="assets/mateus_parente_portrait.jpg" alt="Dr. Mateus Parente" class="absolute inset-0 w-full h-full object-cover object-center mix-blend-overlay opacity-90" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
       
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="eyebrow mb-3 block">Nossas Especialidades</span>
-        <h2 class="font-serif text-4xl font-bold text-brand-navy">Soluções Jurídicas Completas</h2>
+      <!-- Hero Content Centered -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+        <h1 class="heading-display text-sh-paper text-4xl sm:text-5xl lg:text-7xl max-w-3xl mb-6">
+          A justiça que seus direitos exigem.
+        </h1>
+        <p class="text-white/90 text-lg sm:text-xl font-medium max-w-xl mb-8">
+          Defesa intransigente, humanizada e estratégica. Uma nova experiência jurídica em Curitiba.
+        </p>
+        <a href="https://wa.me/5541995552002" target="_blank" class="bg-sh-wine text-white font-medium text-base px-6 py-3.5 rounded-2xl flex items-center gap-2 hover:bg-sh-wine/90 transition shadow-sm">
+          <span>Agendar Reunião</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Area 1 -->
-        <div class="bg-white border border-brand-grayBorder p-8 rounded shadow-elegant shadow-hover-up group">
-          <div class="w-12 h-12 bg-brand-grayLight flex items-center justify-center rounded mb-6 text-brand-gold">
-            <i data-lucide="scale" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Direito Trabalhista</h3>
-          <p class="text-brand-grayMuted text-sm leading-relaxed mb-6">
-            Defesa completa em demissões, horas extras não pagas, reconhecimento de vínculo e rescisão indireta.
-          </p>
-          <a href="https://wa.me/5541995552002" target="_blank" class="text-sm font-bold text-brand-navy group-hover:text-brand-crimson transition flex items-center gap-1">
-            Saiba Mais <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
+      <!-- Floating UI Card Left (Social Proof) -->
+      <div class="absolute hidden lg:flex flex-col gap-3 bottom-12 left-12 glass-card rounded-2xl p-4 w-72">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-8 h-8 rounded-full bg-sh-lilac flex items-center justify-center text-sh-charcoal font-semibold text-xs">OAB</div>
+          <div class="text-sm font-semibold text-sh-charcoal">Atuação Registrada</div>
         </div>
-        
-        <!-- Area 2 -->
-        <div class="bg-white border border-brand-grayBorder p-8 rounded shadow-elegant shadow-hover-up group">
-          <div class="w-12 h-12 bg-brand-grayLight flex items-center justify-center rounded mb-6 text-brand-gold">
-            <i data-lucide="heart-pulse" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Acidentes de Trabalho</h3>
-          <p class="text-brand-grayMuted text-sm leading-relaxed mb-6">
-            Indenizações por acidentes, doenças ocupacionais, Burnout e estabilidade provisória no emprego.
-          </p>
-          <a href="https://wa.me/5541995552002" target="_blank" class="text-sm font-bold text-brand-navy group-hover:text-brand-crimson transition flex items-center gap-1">
-            Saiba Mais <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
-        </div>
+        <p class="text-[13px] text-sh-charcoal/80 leading-relaxed">
+          Inscrito regularmente na Ordem dos Advogados do Brasil, Seção Paraná. Atendimento conforme o Código de Ética.
+        </p>
+      </div>
 
-        <!-- Area 3 -->
-        <div class="bg-white border border-brand-grayBorder p-8 rounded shadow-elegant shadow-hover-up group">
-          <div class="w-12 h-12 bg-brand-grayLight flex items-center justify-center rounded mb-6 text-brand-gold">
-            <i data-lucide="alert-triangle" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Assédio e Insalubridade</h3>
-          <p class="text-brand-grayMuted text-sm leading-relaxed mb-6">
-            Proteção contra assédio moral e busca pelo pagamento justo de adicionais de periculosidade e insalubridade.
-          </p>
-          <a href="https://wa.me/5541995552002" target="_blank" class="text-sm font-bold text-brand-navy group-hover:text-brand-crimson transition flex items-center gap-1">
-            Saiba Mais <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
+      <!-- Floating UI Card Right (Stats) -->
+      <div class="absolute hidden lg:flex flex-col gap-3 top-12 right-12 glass-card rounded-2xl p-4 w-64">
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-semibold text-sh-charcoal">Casos Conduzidos</span>
+          <i data-lucide="trending-up" class="w-4 h-4 text-sh-violet"></i>
         </div>
-
-        <!-- Area 4 -->
-        <div class="bg-white border border-brand-grayBorder p-8 rounded shadow-elegant shadow-hover-up group">
-          <div class="w-12 h-12 bg-brand-grayLight flex items-center justify-center rounded mb-6 text-brand-gold">
-            <i data-lucide="file-text" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Direito Civil</h3>
-          <p class="text-brand-grayMuted text-sm leading-relaxed mb-6">
-            Análise e elaboração de contratos, ações de cobrança, execuções e reparação de danos morais e materiais.
-          </p>
-          <a href="https://wa.me/5541995552002" target="_blank" class="text-sm font-bold text-brand-navy group-hover:text-brand-crimson transition flex items-center gap-1">
-            Saiba Mais <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
-        </div>
-
-        <!-- Area 5 -->
-        <div class="bg-white border border-brand-grayBorder p-8 rounded shadow-elegant shadow-hover-up group">
-          <div class="w-12 h-12 bg-brand-grayLight flex items-center justify-center rounded mb-6 text-brand-gold">
-            <i data-lucide="users" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Família & Sucessões</h3>
-          <p class="text-brand-grayMuted text-sm leading-relaxed mb-6">
-            Atuação discreta em inventários, divórcios, partilha de bens e revisão de pensão alimentícia.
-          </p>
-          <a href="https://wa.me/5541995552002" target="_blank" class="text-sm font-bold text-brand-navy group-hover:text-brand-crimson transition flex items-center gap-1">
-            Saiba Mais <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
-        </div>
-
-        <!-- Area 6 -->
-        <div class="bg-white border border-brand-grayBorder p-8 rounded shadow-elegant shadow-hover-up group">
-          <div class="w-12 h-12 bg-brand-grayLight flex items-center justify-center rounded mb-6 text-brand-gold">
-            <i data-lucide="building-2" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-brand-navy mb-3">Assessoria Empresarial</h3>
-          <p class="text-brand-grayMuted text-sm leading-relaxed mb-6">
-            Auditoria trabalhista, elaboração de regulamentos internos e defesa corporativa perante tribunais.
-          </p>
-          <a href="https://wa.me/5541995552002" target="_blank" class="text-sm font-bold text-brand-navy group-hover:text-brand-crimson transition flex items-center gap-1">
-            Saiba Mais <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
+        <div class="text-3xl font-medium tracking-tight text-sh-charcoal">+1.500</div>
+        <div class="h-1 w-full bg-sh-mist rounded-full overflow-hidden mt-1">
+          <div class="h-full bg-sh-violet w-[85%] rounded-full"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SOBRE O ADVOGADO -->
-  <section id="sobre" class="py-24 bg-brand-grayLight border-t border-brand-grayBorder">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
+  <!-- SUITE PRODUCT CARDS (Áreas de Atuação) -->
+  <section id="areas" class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-24 lg:mb-32">
+    <div class="mb-12">
+      <h2 class="heading-section text-3xl sm:text-4xl lg:text-5xl text-sh-charcoal max-w-2xl">
+        Soluções jurídicas estruturadas para o seu momento.
+      </h2>
+      <p class="text-sh-stone mt-4 text-lg">Especialidades do escritório Parente & Mariano.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="bg-sh-paper border border-sh-mist rounded-2xl p-6 flex flex-col justify-between items-start transition hover:border-sh-charcoal/20">
         <div>
-          <img src="assets/mateus_parente_office.jpg" alt="Dr. Mateus Parente no Escritório" class="w-full h-auto object-cover rounded shadow-elegant" />
+          <div class="w-10 h-10 rounded-lg bg-sh-parchment flex items-center justify-center mb-5">
+            <i data-lucide="scale" class="w-5 h-5 text-sh-charcoal"></i>
+          </div>
+          <h3 class="text-xl font-bold text-sh-charcoal mb-2">Direito Trabalhista</h3>
+          <p class="text-sh-stone text-base leading-relaxed mb-6 line-clamp-3">
+            Demissões injustas, horas extras, rescisão indireta e busca por todos os seus direitos sonegados pelo empregador.
+          </p>
         </div>
-        <div class="space-y-6">
-          <span class="eyebrow block">Sobre o Advogado</span>
-          <h2 class="font-serif text-4xl font-bold text-brand-navy leading-tight">
-            Advocacia Estratégica, Ética e Pessoal.
-          </h2>
-          <p class="text-brand-grayMuted leading-relaxed">
-            O <strong>Dr. Mateus Parente</strong> é sócio fundador do escritório <strong>Parente & Mariano Advogados</strong>, situado na histórica Rua Riachuelo, 102, no centro jurídico e executivo de Curitiba.
-          </p>
-          <p class="text-brand-grayMuted leading-relaxed">
-            Especializado na defesa contundente de Direitos Trabalhistas e Cíveis, seu trabalho elimina a distância entre cliente e advogado. Aqui você é atendido de forma direta, com explicações francas e uma estratégia desenhada especificamente para a sua realidade.
-          </p>
-          
-          <ul class="space-y-4 pt-4 border-t border-brand-grayBorder">
-            <li class="flex items-start gap-3 text-brand-grayMain font-medium">
-              <i data-lucide="check" class="w-5 h-5 text-brand-gold mt-0.5"></i>
-              Foco Pleno no Cliente: Sem falsas promessas e sem juridiquês.
-            </li>
-            <li class="flex items-start gap-3 text-brand-grayMain font-medium">
-              <i data-lucide="check" class="w-5 h-5 text-brand-gold mt-0.5"></i>
-              Agilidade: Protocolo rápido e acompanhamento incisivo dos prazos.
-            </li>
-          </ul>
+        <a href="https://wa.me/5541995552002" class="link-violet font-medium text-base">Consultar sobre rescisão</a>
+      </div>
 
-          <div class="pt-6">
-            <img src="assets/mateus_parente_portrait.jpg" alt="Assinatura" class="h-16 w-16 rounded-full object-cover inline-block border-2 border-brand-gold mb-2" />
-            <div class="font-serif text-lg font-bold text-brand-navy">Dr. Mateus Parente</div>
-            <div class="text-sm text-brand-grayMuted">Titular Fundador</div>
+      <!-- Card 2 -->
+      <div class="bg-sh-paper border border-sh-mist rounded-2xl p-6 flex flex-col justify-between items-start transition hover:border-sh-charcoal/20">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-sh-parchment flex items-center justify-center mb-5">
+            <i data-lucide="heart-pulse" class="w-5 h-5 text-sh-charcoal"></i>
+          </div>
+          <h3 class="text-xl font-bold text-sh-charcoal mb-2">Acidentes de Trabalho</h3>
+          <p class="text-sh-stone text-base leading-relaxed mb-6 line-clamp-3">
+            Indenizações por acidentes, LER/DORT, Burnout, garantia de estabilidade de 12 meses e reintegração.
+          </p>
+        </div>
+        <a href="https://wa.me/5541995552002" class="link-violet font-medium text-base">Consultar sobre acidentes</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-sh-paper border border-sh-mist rounded-2xl p-6 flex flex-col justify-between items-start transition hover:border-sh-charcoal/20">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-sh-parchment flex items-center justify-center mb-5">
+            <i data-lucide="alert-triangle" class="w-5 h-5 text-sh-charcoal"></i>
+          </div>
+          <h3 class="text-xl font-bold text-sh-charcoal mb-2">Assédio Moral</h3>
+          <p class="text-sh-stone text-base leading-relaxed mb-6 line-clamp-3">
+            Blindagem e indenização contra perseguições, humilhações e cobrança de adicionais de insalubridade e periculosidade.
+          </p>
+        </div>
+        <a href="https://wa.me/5541995552002" class="link-violet font-medium text-base">Conversar em sigilo</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-sh-paper border border-sh-mist rounded-2xl p-6 flex flex-col justify-between items-start transition hover:border-sh-charcoal/20">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-sh-parchment flex items-center justify-center mb-5">
+            <i data-lucide="file-text" class="w-5 h-5 text-sh-charcoal"></i>
+          </div>
+          <h3 class="text-xl font-bold text-sh-charcoal mb-2">Direito Civil</h3>
+          <p class="text-sh-stone text-base leading-relaxed mb-6 line-clamp-3">
+            Contratos seguros, negociações, cobranças, execução de dívidas e ações de reparação de perdas e danos.
+          </p>
+        </div>
+        <a href="https://wa.me/5541995552002" class="link-violet font-medium text-base">Avaliar contrato/dívida</a>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-sh-paper border border-sh-mist rounded-2xl p-6 flex flex-col justify-between items-start transition hover:border-sh-charcoal/20">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-sh-parchment flex items-center justify-center mb-5">
+            <i data-lucide="users" class="w-5 h-5 text-sh-charcoal"></i>
+          </div>
+          <h3 class="text-xl font-bold text-sh-charcoal mb-2">Família e Sucessões</h3>
+          <p class="text-sh-stone text-base leading-relaxed mb-6 line-clamp-3">
+            Discrição e agilidade em divórcios, partilhas, pensão alimentícia e inventários judiciais ou extrajudiciais.
+          </p>
+        </div>
+        <a href="https://wa.me/5541995552002" class="link-violet font-medium text-base">Orientações de família</a>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-sh-paper border border-sh-mist rounded-2xl p-6 flex flex-col justify-between items-start transition hover:border-sh-charcoal/20">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-sh-parchment flex items-center justify-center mb-5">
+            <i data-lucide="building-2" class="w-5 h-5 text-sh-charcoal"></i>
+          </div>
+          <h3 class="text-xl font-bold text-sh-charcoal mb-2">Assessoria Empresarial</h3>
+          <p class="text-sh-stone text-base leading-relaxed mb-6 line-clamp-3">
+            Prevenção de passivos, adequação às leis do trabalho e defesa robusta das empresas perante os tribunais.
+          </p>
+        </div>
+        <a href="https://wa.me/5541995552002" class="link-violet font-medium text-base">Saber mais para empresas</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DARK FEATURE BAND (Sobre o Escritório) -->
+  <section id="sobre" class="w-full bg-sh-lagoon text-sh-paper mb-24 lg:mb-32 overflow-hidden">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="grid lg:grid-cols-2">
+        
+        <!-- Art / Geometric Left -->
+        <div class="relative h-[400px] lg:h-auto min-h-[500px]">
+          <!-- Utilizing the photo in a creative way to mimic the dark band art -->
+          <img src="assets/mateus_parente_consultation.jpg" alt="Atendimento" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40" />
+          
+          <!-- Geometric overlays -->
+          <div class="absolute inset-0 bg-sh-lagoon/50 mix-blend-multiply"></div>
+          <div class="absolute top-12 left-12 w-64 h-80 bg-sh-lilac/10 backdrop-blur-sm border border-white/10 transform rotate-[-3deg] rounded-2xl"></div>
+          <div class="absolute bottom-12 right-12 w-72 h-64 bg-sh-violet/20 backdrop-blur-sm border border-white/10 transform rotate-[4deg] rounded-2xl flex items-end p-6">
+            <p class="font-serif text-white/60 italic text-2xl rotate-[-4deg]">Parente & Mariano.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- DIFERENCIAIS -->
-  <section id="diferenciais" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="bg-brand-navy rounded text-white overflow-hidden shadow-elegant grid lg:grid-cols-2 items-center mb-16">
-        <div class="p-12 lg:p-16 space-y-6">
-          <span class="eyebrow block text-brand-gold">Por Que Nos Escolher</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold">Você é Ouvido por Quem Conduz o Seu Processo</h2>
-          <p class="text-slate-300 leading-relaxed">
-            Você não é transferido de estagiário em estagiário. O Dr. Mateus analisa pessoalmente as particularidades do seu caso, elabora os cálculos com precisão e alinha com você a melhor decisão.
+        <!-- Text Content Right -->
+        <div class="p-12 lg:p-24 flex flex-col justify-center">
+          <h2 class="heading-display text-4xl sm:text-5xl mb-6">
+            Não somos um escritório, somos seus parceiros estratégicos.
+          </h2>
+          <p class="text-white/80 text-lg leading-relaxed mb-6">
+            O Dr. Mateus Parente fundou o escritório com uma premissa clara: eliminar a barreira entre advogado e cliente. Sediados no coração de Curitiba, na Rua Riachuelo, entregamos clareza nos cálculos, transparência nos riscos e agressividade na defesa dos seus interesses.
           </p>
-          <a href="https://wa.me/5541995552002" target="_blank" class="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-goldLight text-brand-navy font-bold px-6 py-3 rounded transition mt-2">
-            Agendar Reunião
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
+          <ul class="space-y-4 text-white/90 mb-10">
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sh-lilac rounded-full"></span> Atendimento direto, sem repasse para estagiários.</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sh-lilac rounded-full"></span> Apresentação de planilhas e riscos antes do processo.</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-sh-lilac rounded-full"></span> Sigilo e aderência rigorosa ao código da OAB.</li>
+          </ul>
+          <div>
+            <a href="https://wa.me/5541995552002" class="inline-flex items-center justify-center px-6 py-3 border border-sh-paper rounded-lg text-sh-paper font-medium hover:bg-sh-paper hover:text-sh-lagoon transition">
+              Agendar visita ao escritório
+            </a>
+          </div>
         </div>
-        <div class="h-full min-h-[300px]">
-          <img src="assets/mateus_parente_consultation.jpg" alt="Consulta" class="w-full h-full object-cover" />
-        </div>
-      </div>
 
+      </div>
     </div>
   </section>
 
-  <!-- CTA URGENTE -->
-  <section class="bg-brand-crimson py-16 text-white text-center">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6">Precisa de Ajuda Imediata com o Seu Caso?</h2>
-      <p class="text-white/80 mb-8 max-w-2xl mx-auto">Nossa equipe está de plantão para realizar uma análise prévia e confidencial da sua situação. Não espere perder seus direitos.</p>
-      <a href="https://wa.me/5541995552002" target="_blank" class="inline-flex items-center justify-center gap-2 bg-white text-brand-crimson font-bold px-8 py-4 rounded text-lg hover:bg-gray-100 transition shadow-lg">
-        <i data-lucide="phone-call" class="w-5 h-5"></i>
-        Falar Agora com o Escritório
-      </a>
+  <!-- TRUST CARDS (Diferenciais em Linha Simples) -->
+  <section class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-24 lg:mb-32">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-10">
+      <div>
+        <h2 class="heading-section text-3xl sm:text-4xl text-sh-charcoal">Como trabalhamos</h2>
+        <p class="text-sh-stone mt-2 text-lg">Nosso método foca no resultado rápido e seguro.</p>
+      </div>
+    </div>
+
+    <!-- Trust Cards / Horizontal Flow -->
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="bg-sh-paper border border-sh-mist p-6 pt-12">
+        <h4 class="font-bold text-sh-charcoal text-lg mb-2">Sem Juridiquês</h4>
+        <p class="text-sm text-sh-stone leading-relaxed">Traduzimos a lei para a sua realidade. Você sabe exatamente o que está acontecendo.</p>
+      </div>
+      <div class="bg-sh-paper border border-sh-mist p-6 pt-12">
+        <h4 class="font-bold text-sh-charcoal text-lg mb-2">Cálculos Prévios</h4>
+        <p class="text-sm text-sh-stone leading-relaxed">Não entramos no escuro. Você saberá a expectativa de valores antes da assinatura.</p>
+      </div>
+      <div class="bg-sh-paper border border-sh-mist p-6 pt-12">
+        <h4 class="font-bold text-sh-charcoal text-lg mb-2">Agilidade</h4>
+        <p class="text-sm text-sh-stone leading-relaxed">Uso de ferramentas digitais e peticionamento expresso para acelerar os prazos.</p>
+      </div>
+      <div class="bg-sh-paper border border-sh-mist p-6 pt-12">
+        <h4 class="font-bold text-sh-charcoal text-lg mb-2">Atendimento Virtual</h4>
+        <p class="text-sm text-sh-stone leading-relaxed">Resolvemos tudo via WhatsApp ou Zoom, sem que você precise se deslocar.</p>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-brand-navyDark text-slate-400 py-16 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+  <footer class="w-full bg-sh-wine text-sh-paper py-16 lg:py-24">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <!-- Col 1 -->
         <div class="md:col-span-1">
-          <span class="block font-serif text-2xl font-bold text-white mb-4">DR. MATEUS PARENTE</span>
-          <p class="text-sm leading-relaxed mb-6">
-            Defesa incansável e transparente focada em garantir os direitos dos trabalhadores e segurança às empresas.
+          <div class="font-semibold text-xl mb-6">Parente & Mariano</div>
+          <p class="text-white/70 text-sm leading-relaxed">
+            Advocacia trabalhista e cível boutique, desenhada para proteger seus direitos com máxima transparência e inteligência jurídica em Curitiba e Região Metropolitana.
           </p>
         </div>
         
+        <!-- Col 2 -->
         <div>
-          <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-sm">Navegação</h4>
-          <ul class="space-y-3 text-sm">
-            <li><a href="#inicio" class="hover:text-brand-gold transition">Início</a></li>
-            <li><a href="#areas" class="hover:text-brand-gold transition">Áreas de Atuação</a></li>
-            <li><a href="#sobre" class="hover:text-brand-gold transition">O Advogado</a></li>
-            <li><a href="#diferenciais" class="hover:text-brand-gold transition">Diferenciais</a></li>
+          <h5 class="font-bold text-sm mb-5">Especialidades</h5>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li><a href="#" class="hover:text-white transition">Direito Trabalhista</a></li>
+            <li><a href="#" class="hover:text-white transition">Acidentes Ocupacionais</a></li>
+            <li><a href="#" class="hover:text-white transition">Insalubridade</a></li>
+            <li><a href="#" class="hover:text-white transition">Assessoria Empresarial</a></li>
           </ul>
         </div>
-        
+
+        <!-- Col 3 -->
         <div>
-          <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-sm">Especialidades</h4>
-          <ul class="space-y-3 text-sm">
-            <li>Direito Trabalhista</li>
-            <li>Acidentes de Trabalho</li>
-            <li>Insalubridade e Periculosidade</li>
-            <li>Direito Civil e Contratos</li>
-            <li>Família e Sucessões</li>
+          <h5 class="font-bold text-sm mb-5">Escritório</h5>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li><a href="#" class="hover:text-white transition">O Advogado</a></li>
+            <li><a href="#" class="hover:text-white transition">Nossa Sede</a></li>
+            <li><a href="#" class="hover:text-white transition">Termos de Privacidade</a></li>
           </ul>
         </div>
-        
+
+        <!-- Col 4 -->
         <div>
-          <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-sm">Contato & Sede</h4>
-          <ul class="space-y-3 text-sm">
-            <li class="flex items-start gap-2">
-              <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 text-brand-gold flex-shrink-0"></i>
-              <span>Rua Riachuelo, 102 - Centro<br/>Curitiba - PR</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <i data-lucide="phone" class="w-4 h-4 text-brand-gold flex-shrink-0"></i>
-              <span>(41) 3233-3784</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <i data-lucide="message-circle" class="w-4 h-4 text-brand-gold flex-shrink-0"></i>
-              <span>(41) 99555-2002</span>
+          <h5 class="font-bold text-sm mb-5">Contato (Curitiba - PR)</h5>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li>Rua Riachuelo, 102 - Centro</li>
+            <li>Telefone: (41) 3233-3784</li>
+            <li>WhatsApp: (41) 99555-2002</li>
+            <li class="pt-4">
+              <a href="https://wa.me/5541995552002" class="inline-flex items-center justify-center bg-sh-lilac text-sh-charcoal font-medium px-4 py-2 rounded-lg text-sm hover:bg-white transition">
+                Falar com a equipe
+              </a>
             </li>
           </ul>
         </div>
       </div>
-      
-      <div class="pt-8 border-t border-white/10 text-center text-xs flex flex-col md:flex-row items-center justify-between gap-4">
-        <p>&copy; 2026 Parente & Mariano Advogados Associados. Todos os direitos reservados.</p>
-        <p>Atuação em conformidade com o Código de Ética e Disciplina da OAB.</p>
+
+      <div class="mt-16 pt-8 border-t border-white/20 text-xs text-white/50 flex flex-col md:flex-row justify-between gap-4">
+        <p>&copy; 2026 Parente & Mariano Advogados. Todos os direitos reservados.</p>
+        <p>Inscrição OAB/PR sob rigoroso respeito ao Código de Ética Profissional.</p>
       </div>
+
     </div>
   </footer>
 
   <script>
     lucide.createIcons();
+    
+    // Sticky header border logic
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-nav');
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
   </script>
 </body>
 </html>
