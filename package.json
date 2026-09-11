@@ -1,0 +1,9 @@
+{
+  "name": "c04-mateus-parente",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing Page Dr. Mateus Parente Advogado",
+  "scripts": {
+    "dev": "npx serve ."
+  }
+}
