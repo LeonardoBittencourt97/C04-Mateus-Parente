@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Mateus Parente | Links e Atendimento Jurídico</title>
-  <meta name="description" content="Hub de links e atendimento oficial do Dr. Mateus Parente - Parente & Mariano Advogados. Curitiba/PR." />
-  <meta name="robots" content="noindex, follow" />
-
+  <title>Links Rápidos | Dr. Mateus Parente</title>
+  <meta name="description" content="Central de links de contato e redes sociais do Dr. Mateus Parente." />
+  
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,22 +19,24 @@
         extend: {
           colors: {
             brand: {
-              gold: '#D4AF37',
-              goldLight: '#E8CA65',
-              goldDark: '#997E25',
-              navy: '#0B111E',
-              navyCard: '#111928',
-              navyBorder: '#1E293B',
-              whatsapp: '#25D366'
+              navy: '#0E1726',
+              navyDark: '#0A111D',
+              gold: '#C5A880',
+              goldLight: '#D4B892',
+              crimson: '#8B1E2B',
+              grayMain: '#1A1A1A',
+              grayMuted: '#555555',
+              grayLight: '#F8F9FA',
+              grayBorder: '#E5E7EB'
             }
           },
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            cinzel: ['"Cinzel"', 'serif']
+            sans: ['"Inter"', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'serif']
           },
           boxShadow: {
-            'glow-gold': '0 0 25px -5px rgba(212, 175, 55, 0.35)',
-            'glow-green': '0 0 25px -5px rgba(37, 211, 102, 0.4)'
+            'elegant': '0 10px 30px rgba(0, 0, 0, 0.05)',
+            'btn': '0 4px 14px rgba(0, 0, 0, 0.08)'
           }
         }
       }
@@ -44,190 +45,126 @@
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #F8F9FA;
+      color: #1A1A1A;
+    }
+    .hover-lift {
+      transition: all 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .bg-topo {
+      background-image: linear-gradient(to bottom, #0E1726 0%, #0E1726 50%, #F8F9FA 50%, #F8F9FA 100%);
+    }
+  </style>
 </head>
-<body class="bg-brand-navy min-h-screen text-slate-100 font-sans antialiased flex flex-col items-center justify-between p-4 sm:p-6 selection:bg-brand-gold selection:text-brand-navy relative overflow-x-hidden">
-  
-  <!-- Ambient Glow -->
-  <div class="fixed top-12 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<body class="font-sans antialiased min-h-screen flex flex-col justify-between">
 
-  <!-- Container -->
-  <div class="w-full max-w-md mx-auto my-auto space-y-6 pt-6 pb-10">
+  <main class="w-full flex-grow flex flex-col items-center">
     
-    <!-- Profile Card Header -->
-    <div class="text-center space-y-3">
+    <!-- Top Background & Profile Section -->
+    <div class="w-full bg-brand-navy pt-16 pb-24 px-4 relative flex flex-col items-center justify-center border-b border-brand-gold/20 shadow-sm">
       
-      <div class="relative inline-block">
-        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-brand-gold to-amber-700 p-1 shadow-glow-gold">
-          <div class="w-full h-full rounded-full bg-brand-navy flex items-center justify-center border-2 border-brand-navy">
-            <span class="font-cinzel text-3xl sm:text-4xl font-extrabold text-brand-gold">MP</span>
-          </div>
+      <!-- Profile Picture -->
+      <div class="absolute -bottom-16">
+        <div class="relative w-32 h-32 rounded-full border-4 border-[#F8F9FA] shadow-elegant overflow-hidden bg-white">
+          <img 
+            src="../assets/mateus_parente_portrait.jpg" 
+            alt="Dr. Mateus Parente" 
+            class="w-full h-full object-cover object-top"
+          />
         </div>
-        <span class="absolute bottom-1 right-1 flex h-5 w-5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-5 w-5 bg-brand-whatsapp border-2 border-brand-navy items-center justify-center text-[9px] font-bold text-white">✓</span>
-        </span>
+        <!-- Verification badge -->
+        <div class="absolute bottom-0 right-2 w-8 h-8 bg-brand-gold rounded-full border-2 border-[#F8F9FA] flex items-center justify-center shadow-sm">
+          <i data-lucide="check" class="w-4 h-4 text-white font-bold"></i>
+        </div>
       </div>
-
-      <div>
-        <h1 class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider text-white">DR. MATEUS PARENTE</h1>
-        <p class="text-xs sm:text-sm text-amber-300/90 font-medium mt-0.5">Parente & Mariano Advogados</p>
-        <p class="text-[11px] text-slate-400 mt-0.5">Advogado Trabalhista, Civil & Empresarial • Curitiba/PR</p>
-      </div>
-
-      <div class="flex flex-wrap items-center justify-center gap-2 pt-1 text-[11px]">
-        <span class="px-2.5 py-0.5 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 flex items-center gap-1">
-          <i data-lucide="map-pin" class="w-3 h-3 text-brand-gold"></i>
-          Centro, Curitiba
-        </span>
-        <span class="px-2.5 py-0.5 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 flex items-center gap-1 font-semibold">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          Plantão Ativo
-        </span>
-      </div>
-
     </div>
 
-    <!-- Divider Line -->
-    <div class="w-full h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"></div>
+    <!-- Texts & Bio -->
+    <div class="mt-20 px-4 text-center max-w-lg w-full mb-8">
+      <h1 class="font-serif text-3xl font-bold text-brand-navy mb-1">Dr. Mateus Parente</h1>
+      <p class="text-sm font-medium text-brand-gold uppercase tracking-widest mb-3">Parente & Mariano Advogados</p>
+      <p class="text-brand-grayMuted text-sm leading-relaxed">
+        Defesa estratégica dos seus direitos trabalhistas e cíveis em Curitiba e Região.
+      </p>
+    </div>
 
-    <!-- Action Links -->
-    <div class="space-y-3.5">
+    <!-- Links List -->
+    <div class="w-full max-w-[500px] px-4 pb-16 flex flex-col gap-4">
       
-      <!-- Primary Featured CTA: WhatsApp -->
-      <a href="https://wa.me/5541995552002?text=Ol%C3%A1%2C%20Dr.%20Mateus%20Parente.%20Vim%20pelo%20Linktree%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica." target="_blank" rel="noopener" class="group relative flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold shadow-glow-green hover:scale-[1.02] active:scale-[0.98] transition border border-emerald-400/30">
-        <div class="flex items-center gap-3.5">
-          <div class="w-10 h-10 rounded-lg bg-black/20 flex items-center justify-center">
+      <!-- WhatsApp (Primary CTA) -->
+      <a href="https://wa.me/5541995552002" target="_blank" rel="noopener" class="w-full bg-brand-crimson text-white rounded-xl py-4 px-6 flex items-center justify-between shadow-btn hover-lift group border border-brand-crimson">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
             <i data-lucide="message-circle" class="w-5 h-5 text-white"></i>
           </div>
-          <div class="text-left">
-            <span class="block text-sm leading-tight">Falar no WhatsApp com o Dr. Mateus</span>
-            <span class="block text-[11px] font-normal text-emerald-100">Atendimento e triagem direta do seu caso</span>
-          </div>
+          <span class="font-semibold">Avaliar Caso via WhatsApp</span>
         </div>
-        <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-100 group-hover:translate-x-1 transition"></i>
+        <i data-lucide="arrow-right" class="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity"></i>
       </a>
 
       <!-- Site Oficial -->
-      <a href="/" class="group flex items-center justify-between p-4 rounded-xl bg-brand-navyCard/90 hover:bg-slate-800/90 border border-amber-500/30 hover:border-amber-400/60 transition hover:scale-[1.01] active:scale-[0.99] shadow-lg">
-        <div class="flex items-center gap-3.5">
-          <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 text-brand-gold flex items-center justify-center">
-            <i data-lucide="globe" class="w-5 h-5"></i>
+      <a href="../index.html" class="w-full bg-white text-brand-navy rounded-xl py-4 px-6 flex items-center justify-between shadow-btn hover-lift group border border-brand-grayBorder hover:border-brand-gold/50 transition-colors">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-grayLight flex items-center justify-center">
+            <i data-lucide="globe" class="w-5 h-5 text-brand-navy"></i>
           </div>
-          <div class="text-left">
-            <span class="block text-sm font-bold text-white">Acessar Nosso Site Oficial</span>
-            <span class="block text-[11px] text-slate-400">Conheça nossa estrutura, áreas e avaliações</span>
-          </div>
+          <span class="font-semibold text-sm">Acessar Site do Escritório</span>
         </div>
-        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:text-brand-gold group-hover:translate-x-0.5 transition"></i>
-      </a>
-
-      <!-- Cálculo de Rescisão e Direitos -->
-      <a href="https://wa.me/5541995552002?text=Ol%C3%A1%2C%20Dr.%20Mateus.%20Gostaria%20de%20fazer%20o%20c%C3%A1lculo%20e%20an%C3%A1lise%20da%20minha%20rescis%C3%A3o." target="_blank" rel="noopener" class="group flex items-center justify-between p-4 rounded-xl bg-brand-navyCard/90 hover:bg-slate-800/90 border border-slate-800 hover:border-slate-700 transition hover:scale-[1.01] active:scale-[0.99]">
-        <div class="flex items-center gap-3.5">
-          <div class="w-10 h-10 rounded-lg bg-slate-800 text-amber-400 flex items-center justify-center">
-            <i data-lucide="scale" class="w-5 h-5"></i>
-          </div>
-          <div class="text-left">
-            <span class="block text-sm font-semibold text-slate-200">Calcular Direitos Trabalhistas</span>
-            <span class="block text-[11px] text-slate-400">Verbas rescisórias, horas extras e FGTS</span>
-          </div>
-        </div>
-        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition"></i>
-      </a>
-
-      <!-- Endereço / Google Maps -->
-      <a href="https://maps.google.com/?q=Rua+Riachuelo+102+Curitiba+PR" target="_blank" rel="noopener" class="group flex items-center justify-between p-4 rounded-xl bg-brand-navyCard/90 hover:bg-slate-800/90 border border-slate-800 hover:border-slate-700 transition hover:scale-[1.01] active:scale-[0.99]">
-        <div class="flex items-center gap-3.5">
-          <div class="w-10 h-10 rounded-lg bg-slate-800 text-amber-400 flex items-center justify-center">
-            <i data-lucide="map-pin" class="w-5 h-5"></i>
-          </div>
-          <div class="text-left">
-            <span class="block text-sm font-semibold text-slate-200">Como Chegar no Escritório</span>
-            <span class="block text-[11px] text-slate-400">Rua Riachuelo, 102 - Sala 123, Centro - Curitiba</span>
-          </div>
-        </div>
-        <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition"></i>
-      </a>
-
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/mateusparente_advogado/" target="_blank" rel="noopener" class="group flex items-center justify-between p-4 rounded-xl bg-brand-navyCard/90 hover:bg-slate-800/90 border border-slate-800 hover:border-slate-700 transition hover:scale-[1.01] active:scale-[0.99]">
-        <div class="flex items-center gap-3.5">
-          <div class="w-10 h-10 rounded-lg bg-pink-500/10 text-pink-400 flex items-center justify-center">
-            <i data-lucide="instagram" class="w-5 h-5"></i>
-          </div>
-          <div class="text-left">
-            <span class="block text-sm font-semibold text-slate-200">Instagram Oficial</span>
-            <span class="block text-[11px] text-slate-400">@mateusparente_advogado</span>
-          </div>
-        </div>
-        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition"></i>
-      </a>
-
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/mateus-parente-52285462/" target="_blank" rel="noopener" class="group flex items-center justify-between p-4 rounded-xl bg-brand-navyCard/90 hover:bg-slate-800/90 border border-slate-800 hover:border-slate-700 transition hover:scale-[1.01] active:scale-[0.99]">
-        <div class="flex items-center gap-3.5">
-          <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center">
-            <i data-lucide="linkedin" class="w-5 h-5"></i>
-          </div>
-          <div class="text-left">
-            <span class="block text-sm font-semibold text-slate-200">LinkedIn Profissional</span>
-            <span class="block text-[11px] text-slate-400">Conexão corporativa e trajetória</span>
-          </div>
-        </div>
-        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition"></i>
-      </a>
-
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/AdvogadoTrabalhistaCuritiba/?locale=pt_BR" target="_blank" rel="noopener" class="group flex items-center justify-between p-4 rounded-xl bg-brand-navyCard/90 hover:bg-slate-800/90 border border-slate-800 hover:border-slate-700 transition hover:scale-[1.01] active:scale-[0.99]">
-        <div class="flex items-center gap-3.5">
-          <div class="w-10 h-10 rounded-lg bg-blue-600/10 text-blue-500 flex items-center justify-center">
-            <i data-lucide="facebook" class="w-5 h-5"></i>
-          </div>
-          <div class="text-left">
-            <span class="block text-sm font-semibold text-slate-200">Página no Facebook</span>
-            <span class="block text-[11px] text-slate-400">Advogado Trabalhista Curitiba</span>
-          </div>
-        </div>
-        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition"></i>
+        <i data-lucide="arrow-right" class="w-4 h-4 text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity"></i>
       </a>
 
       <!-- Telefone Fixo -->
-      <a href="tel:+554132333784" class="group flex items-center justify-between p-4 rounded-xl bg-brand-navyCard/90 hover:bg-slate-800/90 border border-slate-800 hover:border-slate-700 transition hover:scale-[1.01] active:scale-[0.99]">
-        <div class="flex items-center gap-3.5">
-          <div class="w-10 h-10 rounded-lg bg-slate-800 text-brand-gold flex items-center justify-center">
-            <i data-lucide="phone" class="w-5 h-5"></i>
+      <a href="tel:+554132333784" class="w-full bg-white text-brand-navy rounded-xl py-4 px-6 flex items-center justify-between shadow-btn hover-lift group border border-brand-grayBorder hover:border-brand-gold/50 transition-colors">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-grayLight flex items-center justify-center">
+            <i data-lucide="phone" class="w-5 h-5 text-brand-navy"></i>
           </div>
-          <div class="text-left">
-            <span class="block text-sm font-semibold text-slate-200">Ligar para o Escritório</span>
-            <span class="block text-[11px] text-slate-400">(41) 3233-3784 • Horário Comercial</span>
-          </div>
+          <span class="font-semibold text-sm">Ligar para a Recepção</span>
         </div>
-        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition"></i>
+        <i data-lucide="arrow-right" class="w-4 h-4 text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity"></i>
       </a>
 
-      <!-- E-mail -->
-      <a href="mailto:mateusparente@gmail.com" class="group flex items-center justify-between p-4 rounded-xl bg-brand-navyCard/90 hover:bg-slate-800/90 border border-slate-800 hover:border-slate-700 transition hover:scale-[1.01] active:scale-[0.99]">
-        <div class="flex items-center gap-3.5">
-          <div class="w-10 h-10 rounded-lg bg-slate-800 text-brand-gold flex items-center justify-center">
-            <i data-lucide="mail" class="w-5 h-5"></i>
+      <!-- Localização -->
+      <a href="#" target="_blank" rel="noopener" class="w-full bg-white text-brand-navy rounded-xl py-4 px-6 flex items-center justify-between shadow-btn hover-lift group border border-brand-grayBorder hover:border-brand-gold/50 transition-colors">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-grayLight flex items-center justify-center">
+            <i data-lucide="map-pin" class="w-5 h-5 text-brand-navy"></i>
           </div>
-          <div class="text-left">
-            <span class="block text-sm font-semibold text-slate-200">Enviar um E-mail</span>
-            <span class="block text-[11px] text-slate-400">mateusparente@gmail.com</span>
+          <div class="flex flex-col text-left">
+            <span class="font-semibold text-sm">Visitar a Sede</span>
+            <span class="text-xs text-brand-grayMuted mt-0.5">Rua Riachuelo, 102 - Curitiba</span>
           </div>
         </div>
-        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition"></i>
+        <i data-lucide="arrow-right" class="w-4 h-4 text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity"></i>
       </a>
 
-    </div>
+      <!-- Redes Sociais Alternativas -->
+      <div class="mt-6 border-t border-brand-grayBorder pt-6 flex justify-center gap-4">
+        <a href="#" class="w-12 h-12 rounded-full bg-white shadow-btn border border-brand-grayBorder flex items-center justify-center text-brand-navy hover:text-brand-gold hover:border-brand-gold transition-colors">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+        <a href="#" class="w-12 h-12 rounded-full bg-white shadow-btn border border-brand-grayBorder flex items-center justify-center text-brand-navy hover:text-brand-gold hover:border-brand-gold transition-colors">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        <a href="mailto:contato@parenteemariano.com.br" class="w-12 h-12 rounded-full bg-white shadow-btn border border-brand-grayBorder flex items-center justify-center text-brand-navy hover:text-brand-gold hover:border-brand-gold transition-colors">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+      </div>
 
-    <!-- Footer -->
-    <div class="text-center pt-4 space-y-2 text-[11px] text-slate-500">
-      <p>&copy; 2026 Dr. Mateus Parente • Parente & Mariano Advogados</p>
-      <p class="text-[10px] text-slate-600">Rua Riachuelo, 102 - 12º Andar, Sl 123 - Centro, Curitiba - PR</p>
     </div>
+  </main>
 
-  </div>
+  <footer class="w-full text-center py-6 text-xs text-brand-grayMuted">
+    <p>&copy; 2026 Parente & Mariano Advogados</p>
+    <p class="mt-1">Inscrito na OAB/PR</p>
+  </footer>
 
   <script>
     lucide.createIcons();
