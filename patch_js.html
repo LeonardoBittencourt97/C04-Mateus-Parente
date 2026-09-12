@@ -1,0 +1,31 @@
+<script>
+  // Toggle Pré-Triagem
+  function togglePreRegister() {
+    document.getElementById('pre-register-form').classList.toggle('active');
+  }
+  document.getElementById('pre-register-btn').addEventListener('click', togglePreRegister);
+
+  // Gerar link WhatsApp dinâmico
+  function sendToWhatsApp() {
+    const caseType = document.getElementById('case-type').value;
+    const urgency = document.getElementById('urgency-type').value;
+    if (!caseType) {
+      alert("Por favor, selecione o tipo de caso.");
+      return;
+    }
+    const msg = encodeURIComponent(`Olá Dr. Mateus! Vim pelo site e gostaria de uma avaliação. \n\n📌 Caso: ${caseType} \n⏰ Urgência: ${urgency || 'Não informada'} \n\nAguardo retorno.`);
+    window.open(`https://wa.me/5541995552002?text=${msg}`, '_blank');
+  }
+
+  // Abrir modal de avaliação 5 segundos após scroll
+  let reviewOpened = false;
+  window.addEventListener('scroll', () => {
+    if (!reviewOpened && window.scrollY > 1500) {
+      document.getElementById('review-modal').classList.add('active');
+      reviewOpened = true;
+    }
+  });
+  function closeReviewModal() {
+    document.getElementById('review-modal').classList.remove('active');
+  }
+</script>

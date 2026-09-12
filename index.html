@@ -492,6 +492,94 @@
     </div>
   </section>
 
+  <!-- CSS DO NOVO COMPONENTE -->
+  <style>
+    /* Animação de pulso para botões */
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(139, 30, 43, 0.7); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(139, 30, 43, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(139, 30, 43, 0); }
+    }
+    .animate-pulse-custom { animation: pulse 2s infinite; }
+    
+    /* Estilo da Calculadora/Pré-triagem */
+    .preregister-form {
+      position: fixed; bottom: 100px; left: 24px; z-index: 50;
+      background: white; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      width: 320px; border: 1px solid #E5E7EB; transform: translateY(20px);
+      opacity: 0; pointer-events: none; transition: all 0.3s ease;
+    }
+    .preregister-form.active { transform: translateY(0); opacity: 1; pointer-events: auto; }
+    .preregister-header { background: #0E1726; color: white; padding: 16px; border-radius: 12px 12px 0 0; }
+    .preregister-body { padding: 16px; }
+    
+    /* Modal de Avaliação */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 90;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: all 0.3s ease;
+    }
+    .modal-overlay.active { opacity: 1; pointer-events: auto; }
+    .modal-box { background: white; border-radius: 12px; padding: 24px; width: 90%; max-width: 400px; text-align: center; box-shadow: 0 20px 25px rgba(0,0,0,0.2); }
+  </style>
+
+  <!-- WIDGET DE PRÉ-TRIAGEM (ESQUERDA) -->
+  <div id="pre-register-btn" class="fixed bottom-6 left-6 z-50 bg-brand-navy hover:bg-brand-navyLight text-white font-bold py-3 px-5 rounded-full shadow-lg cursor-pointer flex items-center gap-2 transition-all">
+    <i data-lucide="message-square-dashed" class="w-5 h-5"></i> Fale com um Especialista
+  </div>
+
+  <div id="pre-register-form" class="preregister-form font-sans">
+    <div class="preregister-header flex justify-between items-center">
+      <h3 class="font-bold text-sm">Pré-Atendimento Rápido</h3>
+      <button onclick="togglePreRegister()" class="text-white/80 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+    </div>
+    <div class="preregister-body">
+      <p class="text-xs text-brand-grayMuted mb-4">Selecione sua área para direcionarmos ao especialista correto:</p>
+      
+      <select id="case-type" class="w-full border border-brand-grayBorder rounded p-2 text-sm mb-3 focus:border-brand-gold outline-none">
+        <option value="">Tipo de Caso...</option>
+        <option value="Demissão / Verbas Rescisórias">Demissão / Verbas Rescisórias</option>
+        <option value="Acidente de Trabalho">Acidente de Trabalho</option>
+        <option value="Assédio / Insalubridade">Assédio / Insalubridade</option>
+        <option value="Direito Civil / Contratos">Direito Civil / Contratos</option>
+        <option value="Família e Sucessões">Família e Sucessões</option>
+        <option value="Assessoria Empresarial">Assessoria Empresarial</option>
+      </select>
+      
+      <select id="urgency-type" class="w-full border border-brand-grayBorder rounded p-2 text-sm mb-4 focus:border-brand-gold outline-none">
+        <option value="">Qual a urgência?</option>
+        <option value="URGENTE">Alta (URGENTE)</option>
+        <option value="Média">Média</option>
+        <option value="Baixa">Baixa</option>
+      </select>
+      
+      <button onclick="sendToWhatsApp()" class="w-full bg-brand-crimson hover:bg-brand-crimsonHover text-white font-bold py-2.5 rounded transition text-sm">
+        Iniciar Atendimento via WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL AVALIAR GOOGLE -->
+  <div id="review-modal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="flex justify-center text-brand-gold mb-2">
+        <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+        <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+        <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+        <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+        <i data-lucide="star" class="w-8 h-8 fill-current"></i>
+      </div>
+      <h3 class="font-serif text-xl font-bold mb-2">Avalie-nos no Google!</h3>
+      <p class="text-brand-grayMuted text-sm mb-6">Sua avaliação nos ajuda a ajudar mais pessoas. Clique abaixo para nos avaliar com 5 estrelas.</p>
+      <a href="https://g.page/mateus-parente/review?rating=5" target="_blank" class="block w-full bg-white border-2 border-brand-gold hover:bg-brand-gold hover:text-white text-brand-gold font-bold py-2 rounded transition mb-3 text-center">
+        Enviar 5 Estrelas no Google
+      </a>
+      <button onclick="closeReviewModal()" class="text-sm text-gray-500 hover:text-gray-800 w-full">Agora não</button>
+    </div>
+  </div>
+
+
+
   <!-- FOOTER -->
   <footer class="bg-brand-navyDark text-slate-400 py-16 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -553,5 +641,38 @@
   <script>
     lucide.createIcons();
   </script>
+<script>
+  // Toggle Pré-Triagem
+  function togglePreRegister() {
+    document.getElementById('pre-register-form').classList.toggle('active');
+  }
+  document.getElementById('pre-register-btn').addEventListener('click', togglePreRegister);
+
+  // Gerar link WhatsApp dinâmico
+  function sendToWhatsApp() {
+    const caseType = document.getElementById('case-type').value;
+    const urgency = document.getElementById('urgency-type').value;
+    if (!caseType) {
+      alert("Por favor, selecione o tipo de caso.");
+      return;
+    }
+    const msg = encodeURIComponent(`Olá Dr. Mateus! Vim pelo site e gostaria de uma avaliação. \n\n📌 Caso: ${caseType} \n⏰ Urgência: ${urgency || 'Não informada'} \n\nAguardo retorno.`);
+    window.open(`https://wa.me/5541995552002?text=${msg}`, '_blank');
+  }
+
+  // Abrir modal de avaliação 5 segundos após scroll
+  let reviewOpened = false;
+  window.addEventListener('scroll', () => {
+    if (!reviewOpened && window.scrollY > 1500) {
+      document.getElementById('review-modal').classList.add('active');
+      reviewOpened = true;
+    }
+  });
+  function closeReviewModal() {
+    document.getElementById('review-modal').classList.remove('active');
+  }
+</script>
+
+
 </body>
 </html>
